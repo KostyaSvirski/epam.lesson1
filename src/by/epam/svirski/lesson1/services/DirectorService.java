@@ -1,7 +1,7 @@
 package by.epam.svirski.lesson1.services;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+
 import java.util.Map;
 
 import by.epam.svirski.lesson1.entities.PointEntity;
@@ -48,10 +48,10 @@ public class DirectorService {
 	}
 
 	// third task
-	public Map<Double, Double> executeCalculationRatioArea(String areaOfSquare) {
+	public ArrayList<Double> executeCalculationRatioArea(String areaOfSquare) {
 
 		try {
-			Map<Double, Double> mapResult = new HashMap<Double, Double>();
+			ArrayList<Double> result = new ArrayList<Double>();
 			if (ValidateInput.validateDoubleNumberInput(areaOfSquare)) {
 
 				SquareEntity squareOut = new SquareEntity();
@@ -61,18 +61,20 @@ public class DirectorService {
 
 				double ratio = ArithmeticalService.calculateRatio(squareOut.getArea(), squareIn.getArea());
 
-				mapResult.put(squareIn.getArea(), ratio);
-				return mapResult;
+				result.add(squareIn.getArea());
+				result.add(ratio);
+				return result;
 			}
 		} catch (CustomException exception) {
-			Map<Double, Double> mapResult = new HashMap<Double, Double>();
-			mapResult.put(-1.0, -1.0);
-			return mapResult;
+			ArrayList<Double> result = new ArrayList<Double>();
+			result.add(-1.);
+			result.add(-1.);
+			return result;
 		}
-		Map<Double, Double> mapResult = new HashMap<Double, Double>();
-		mapResult.put(-1.0, -1.0);
-		return mapResult;
-		
+		ArrayList<Double> result = new ArrayList<Double>();
+		result.add(-1.);
+		result.add(-1.);
+		return result;		
 	}
 
 	// forth task

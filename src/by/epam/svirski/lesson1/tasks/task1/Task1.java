@@ -6,7 +6,7 @@ public class Task1 {
 
 	public static void main(String[] args) {
 		DirectorService ds = new DirectorService();
-		double result = ds.executeCalculationLastNumber("123");
+		double result = ds.executeCalculationLastNumber("qwerty");
 		
 		System.out.println(result + " 9");
 	}
