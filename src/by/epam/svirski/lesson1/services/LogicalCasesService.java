@@ -23,7 +23,7 @@ public class LogicalCasesService {
 	}
 
 	public static boolean checkForNearest(PointEntity firstPoint, PointEntity secondPoint) {
-		return (ArithmeticalService.calculateDistanceFromZero(firstPoint) > ArithmeticalService
+		return (ArithmeticalService.calculateDistanceFromZero(firstPoint) < ArithmeticalService
 				.calculateDistanceFromZero(secondPoint)) ? true : false;
 	}
 

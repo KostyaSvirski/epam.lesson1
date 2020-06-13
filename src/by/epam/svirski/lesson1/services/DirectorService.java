@@ -55,7 +55,7 @@ public class DirectorService {
 			if (ValidateInput.validateDoubleNumberInput(areaOfSquare)) {
 
 				SquareEntity squareOut = new SquareEntity();
-				squareOut.setArea(Double.valueOf(areaOfSquare));
+				squareOut.setArea(Double.parseDouble(areaOfSquare));
 				SquareEntity squareIn = new SquareEntity();
 				squareIn.setArea(ArithmeticalService.calculateAreaOfInternalSquare(squareOut.getArea()));
 
@@ -65,9 +65,14 @@ public class DirectorService {
 				return mapResult;
 			}
 		} catch (CustomException exception) {
-			return null;
+			Map<Double, Double> mapResult = new HashMap<Double, Double>();
+			mapResult.put(-1.0, -1.0);
+			return mapResult;
 		}
-		return null;
+		Map<Double, Double> mapResult = new HashMap<Double, Double>();
+		mapResult.put(-1.0, -1.0);
+		return mapResult;
+		
 	}
 
 	// forth task
@@ -173,6 +178,9 @@ public class DirectorService {
 	public ArrayList<Double> executeCalculationOfCircle(String radius) throws InputExceptionCustom {
 		try {
 			if (ValidateInput.validateDoubleNumberInput(radius)) {
+				if(Double.parseDouble(radius) <=0) {
+					throw new InputExceptionCustom("radius <= 0");
+				}
 				ArrayList<Double> parametres = ArithmeticalService
 						.calculateParametresOfCircle(Double.parseDouble(radius));
 				return parametres;

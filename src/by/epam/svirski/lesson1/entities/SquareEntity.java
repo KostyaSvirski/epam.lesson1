@@ -15,7 +15,7 @@ public class SquareEntity {
 	}
 
 	public void setArea(double areaInput) {
-		
+		this.area = areaInput;
 	}
 
 	@Override

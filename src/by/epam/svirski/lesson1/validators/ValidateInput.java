@@ -2,6 +2,7 @@ package by.epam.svirski.lesson1.validators;
 
 import by.epam.svirski.lesson1.utils.CustomException;
 
+
 public class ValidateInput {
 
 	public static final int QUANTITY_OF_SECONDS_PER_DAY = 86400;
