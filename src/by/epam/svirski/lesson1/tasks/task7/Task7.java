@@ -19,7 +19,7 @@ public class Task7 {
 				System.out.println("second");
 			}
 
-			if (ds.defineWhichDotNearly("1", "1", "2", "")) {
+			if (ds.defineWhichDotNearly("1", "1", "2", "qwrt")) {
 				System.out.println("first");
 			} else {
 				System.out.println("second");

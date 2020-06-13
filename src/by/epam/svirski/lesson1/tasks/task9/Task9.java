@@ -12,7 +12,7 @@ public class Task9 {
 		try {
 			ArrayList<Double> result = ds.executeCalculationOfCircle("5");
 			System.out.println(result);
-			ArrayList<Double> resultInc = ds.executeCalculationOfCircle("qwerty");
+			ArrayList<Double> resultInc = ds.executeCalculationOfCircle("qwert");
 			
 			System.out.println(resultInc);
 		} catch (InputExceptionCustom e) {

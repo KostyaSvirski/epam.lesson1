@@ -18,7 +18,7 @@ public class Task5 {
 			} else {
 				System.out.println(false);
 			}
-			if(ds.executeCheckPerfection("qwerty")) {
+			if(ds.executeCheckPerfection("qqqq")) {
 				System.out.println(true);
 			} else {
 				System.out.println(false);

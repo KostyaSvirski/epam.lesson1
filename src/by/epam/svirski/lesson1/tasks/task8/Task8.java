@@ -9,7 +9,7 @@ public class Task8 {
 		
 		DirectorService ds = new DirectorService();
 		try {
-			double result1 = ds.calculateSystem("2");
+			double result1 = ds.calculateSystem("qwerty");
 			double result2 = ds.calculateSystem("4");
 			//double incResult = ds.calculateSystem("qwerty");
 			

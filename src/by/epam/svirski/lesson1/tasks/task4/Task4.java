@@ -9,7 +9,7 @@ public class Task4 {
 		DirectorService ds = new DirectorService();
 		String[] inputTrue = {"1", "2", "3", "4"};
 		String[] inputFalse = {"1", "1"};
-		String[] errorInput = {"qwerty"};
+		String[] errorInput = {""};
 		try {
 			if(ds.executeCheckOfEvens(inputTrue)){
 				System.out.println(true);
