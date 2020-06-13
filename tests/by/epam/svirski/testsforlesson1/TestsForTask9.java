@@ -92,4 +92,24 @@ public class TestsForTask9 {
 		}
 
 	}
+	
+	@Test(expectedExceptionsMessageRegExp = "radius <= 0")
+	public void testTask9FailedNegativeRadius() {
+		try {
+			ArrayList<Double> actual = ds.executeCalculationOfCircle("-1");
+			ArrayList<Double> expected = new ArrayList<Double>();
+			expected.add(31.42);
+			expected.add(78.54);
+			
+			double expectedResult = expected.get(0) - expected.get(1);
+			double actualResult = actual.get(0) - actual.get(1);
+			
+			assertEquals(actualResult, expectedResult, 0.01);
+			
+			fail();
+		} catch (InputExceptionCustom e) {
+			assertEquals("radius <= 0", e.getMessage());
+		}
+
+	}
 }
